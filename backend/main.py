@@ -1,11 +1,12 @@
 from fastapi import FastAPI, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from db.database import get_db
-from routes import job_posting_router, company_router
+from routes import job_posting_router, company_router, salary_insights_router
 
 app = FastAPI()
 app.include_router(job_posting_router)
 app.include_router(company_router)
+app.include_router(salary_insights_router)
 
 
 @app.get("/")

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Float, Text, DateTime
+from sqlalchemy import Column, Integer, Float, Text, DateTime, BigInteger
 from sqlalchemy.ext.declarative import declarative_base
 from pydantic import BaseModel
 from datetime import datetime
@@ -9,14 +9,14 @@ Base = declarative_base()
 
 class JobPosting(Base):
     __tablename__ = 'postings'
-    job_id = Column(Integer, primary_key=True, index=True)
+    job_id = Column(BigInteger, primary_key=True, index=True)
     company_name = Column(Text)
     job_title = Column(Text)
     description = Column(Text)
     max_salary = Column(Float)
     pay_period = Column(Text)
     job_location = Column(Text)
-    company_id = Column(Integer)
+    company_id = Column(BigInteger)
     job_views = Column(Integer)
     med_salary = Column(Float)
     min_salary = Column(Float)

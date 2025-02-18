@@ -8,3 +8,4 @@ from .industry import Industry, IndustrySchema
 from .company_speciality import CompanySpeciality, CompanySpecialitySchema
 from .employee_count import EmployeeCount, EmployeeCountSchema
 from .job_industry import JobIndustry, JobIndustrySchema
+from .salary import Salary, SalarySchema
